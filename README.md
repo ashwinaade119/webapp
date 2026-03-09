@@ -1,29 +1,28 @@
-1  sudo apt update
-    2  sudo apt install git -y
-    3  git --version
-    4  ls
-    5  su -
-    6  git clone https://github.com/ashwinaade119/don-t-touch-.git
-    7  ls
-    8  cd don-t-touch-/
-    9  ls
-   10  mkdir html
-   11  cd html/
-   12  ls
-   13  vi index.html
-   14  vi script.js
-   15  ls
-   16  vi style.css
-   17  ls
-   18  cd ..
-   19  ls
-   20  cd html/
-   21  git init
-   22  git add .
-   23  git commit -m "initial commit"
-   24  git remote add origin https://github.com/ashwinaade119/webapp
-   25  git config --list
-   26  git pull origin main
+sudo apt update
+sudo apt install git -y
+git --version
+ls
+su -
+git clone https://github.com/ashwinaade119/don-t-touch-.git
+ls
+cd don-t-touch-/
+ls
+mkdir html
+cd html/
+ls
+vi index.html
+vi script.js
+ls
+vi style.css
+ls
+cd ..
+cd html/
+git init
+git add .
+git commit -m "initial commit"
+git remote add origin https://github.com/ashwinaade119/webapp
+git config --list
+git pull origin main
    27  https://github.com/ashwinaade119/webapp.git
    28  cd ..
    29  https://github.com/ashwinaade119/webapp.git
