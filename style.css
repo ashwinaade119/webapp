@@ -1,0 +1,397 @@
+body {
+    margin: 0;
+    font-family: math;
+}
+
+
+/* ================= NAVBAR ================= */
+
+#navbar {
+    background-color: lightskyblue;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 30px;
+    height: 90px;
+    position: relative;
+    z-index: 1000;
+}
+
+.img_logo img {
+    width: 70px;
+}
+
+.nav_list {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+}
+
+.menu {
+    position: relative;
+    cursor: pointer;
+}
+
+.menu h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.menu h1:hover {
+    border-bottom: 2px solid black;
+}
+
+
+/* ---------- DROPDOWN ---------- */
+
+.under_list {
+    list-style: none;
+    position: absolute;
+    top: 55px;
+    left: 0;
+    background-color: thistle;
+    padding: 12px 20px;
+    display: none;
+    gap: 25px;
+    border-radius: 8px;
+    z-index: 2000;
+    white-space: nowrap;
+}
+
+.under_list.show {
+    display: flex;
+}
+
+.under_list li {
+    font-size: 18px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.under_list li:hover {
+    text-decoration: underline;
+}
+
+
+/* ---------- RIGHT NAV ---------- */
+
+.nav_right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.search_box {
+    padding: 8px;
+    border-radius: 30px;
+    border: 1px solid gray;
+}
+
+.search_btn {
+    padding: 8px 16px;
+    border-radius: 10px;
+    border: none;
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+}
+
+.login_btn {
+    padding: 8px 16px;
+    border-radius: 5px;
+    border: none;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 90px);
+    overflow: hidden;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 1;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    margin-bottom: 20px;
+}
+
+.hero-btn {
+    padding: 12px 32px;
+    border-radius: 30px;
+    border: none;
+    background-color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.hero-btn:hover {
+    background-color: #e5e5e5;
+}
+
+.shop-sport {
+    padding: 50px 40px;
+}
+
+.slider-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+
+/* Container */
+
+.sport-container {
+    display: flex;
+    gap: 32px;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    scroll-behavior: smooth;
+    width: 100%;
+}
+
+
+/* Card */
+
+.sport-card {
+    flex: 0 0 320px;
+    text-align: left;
+}
+
+
+/* Image */
+
+.sport-card img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* Text FIX (this removes G) issue) */
+
+.sport-card p {
+    margin: 12px 0 0;
+    font-size: 18px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+
+/* Arrows */
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: none;
+    background: #eee;
+    font-size: 22px;
+    cursor: pointer;
+    z-index: 5;
+}
+
+.arrow.left {
+    left: -20px;
+}
+
+.arrow.right {
+    right: -20px;
+}
+
+
+/* Hide scrollbar */
+
+.sport-container::-webkit-scrollbar {
+    display: none;
+}
+
+.spotlight {
+    padding: 80px 60px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.spotlight h1 {
+    font-size: 64px;
+    font-weight: 900;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.spotlight .subtitle {
+    font-size: 18px;
+    max-width: 800px;
+    margin: 0 auto 60px;
+    color: #111;
+}
+
+
+/* Grid */
+
+.spotlight-grid {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 40px 30px;
+}
+
+
+/* Items */
+
+.spotlight .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.spotlight .item img {
+    width: 120px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 12px;
+}
+
+.spotlight .item span {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+/* Hover (subtle Nike feel) */
+
+.spotlight .item:hover img {
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
+
+/* Responsive */
+
+@media (max-width: 1200px) {
+    .spotlight-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .spotlight-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .spotlight h1 {
+        font-size: 40px;
+    }
+}
+
+.block {
+    height: 600px;
+    width: 50%;
+}
+
+.new_block1 {
+    background-image: url('https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/075580a2-160b-460c-9ca0-2b2c97201e17/AS+M+NK+DF+ENERGY+TOP+LS.png');
+    position: absolute;
+    z-index: 2;
+}
+
+.new_block2 {
+    background-image: url('https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/58346ead-7631-41f2-b06f-aa8012dcbf97/AS+M+NK+DF+UV+HYVERSE+SS.png');
+    position: absolute;
+    left: 20%;
+    top: 300%;
+    z-index: 3;
+}
+
+.new_block3 {
+    background-image: url('https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/efb0ef8f-2597-41d8-bed1-3a01a75f0bf1/AS+M+NK+DFADV+STRIDE+NVLTY+SS.png');
+    position: absolute;
+    left: 40%;
+    top: 325%;
+}
+
+.cards {
+    display: flex;
+    height: 500px;
+    background-color: burlywood;
+}
+
+.cards_data {
+    background-color: aquamarine;
+    height: 90%;
+    width: 25%;
+    align-content: center;
+    justify-items: center;
+    margin: 10px;
+}
+
+.inner_Cards {
+    background-color: rgba(220, 20, 190, 0.94);
+    width: 90%;
+    height: 90%;
+}
+
+.card_img {
+    background-color: #b1aca6;
+    height: 70%;
+}
+
+.cards_info {
+    background-color: chocolate;
+    height: 30%;
+}
+
+.card_img2 {
+    display: none;
+}
+
+.card_img:hover {
+    cursor: pointer;
+    height: 70%;
+    border: 2px solid gray;
+}
+
+.card_img:hover>.card_img1 {
+    display: none;
+}
+
+.card_img:hover>.card_img2 {
+    display: block;
+}
